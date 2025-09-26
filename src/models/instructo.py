@@ -1,4 +1,4 @@
-class instructo: # Classe para representar um instrutor
+class Instructo: # Classe para representar um instrutor
     def __init__(self, nome, instrutor_id, email, especialidade, idade, genero):
         self.nome = nome
         self.instrutor_id = instrutor_id
@@ -6,6 +6,14 @@ class instructo: # Classe para representar um instrutor
         self.especialidade = especialidade
         self.idade = idade
         self.genero = genero
-
-    def greet(self):
-        return f"Hello, {self.nome, self.instrutor_id, self.email, self.especialidade, self.idade, self.genero}!"
+    
+    def to_dict(self):
+        """Retorna uma representação da classe em formato de dicionário."""
+        return {
+            "nome": self.nome,
+            "instrutor_id": self.instrutor_id,
+            "email": self.email,
+            "especialidade": self.especialidade,
+            "idade": self.idade,
+            "genero": self.genero
+        }
