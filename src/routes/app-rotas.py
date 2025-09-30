@@ -42,3 +42,5 @@ def registro():
         return jsonify({"error": "As senhas não coincidem!"}), 400
 
     return jsonify({"message": "Usuário registrado com sucesso!"}), 201
+
+##
